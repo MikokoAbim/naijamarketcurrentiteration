@@ -1,0 +1,12 @@
+fastapi[all]
+uvicorn
+pyautogui
+pywinauto
+pyperclip
+langchain
+langchain-community
+langchain-ollama
+langchain-openai
+langgraph
+python-dotenv
+psycopg2-binary

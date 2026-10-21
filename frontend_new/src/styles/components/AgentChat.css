@@ -1,0 +1,175 @@
+.chat-toggle{
+    position: fixed;
+
+    bottom: 24px;
+    right: 24px;
+
+    width: 68px;
+    height: 68px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #008751;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+    z-index: 1000;
+
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+
+    transition: 0.2s;
+}
+
+.chat-toggle:hover {
+    transform: scale(1.05);
+}
+
+.agent-chat{
+    position: fixed;
+
+    bottom: 100px;
+    right: 24px;
+
+    width: 360px;
+    height: 65vh;
+    max-height: 600px;
+
+    background: rgb(190, 42, 42);
+
+    border-radius: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+
+    z-index: 999;
+}
+
+.agent-header{
+    background: #008751; /* Nigerian flag green */
+    color: white;
+
+    padding: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agent-messages{
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    background: #e0e9df;
+}
+
+.message {
+    max-width: 80%;
+
+    padding: 14px 16px;
+
+    border-radius: 18px;
+
+    line-height: 1.5;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+
+    min-width: 0;
+}
+
+.message.user{
+    align-self: flex-end;
+
+    background: #008751;
+
+    color: white;
+
+    border-bottom-right-radius: 4px;
+}
+
+.message.agent{
+    align-self: flex-start;
+
+    background: white;
+
+    color: #222;
+
+    border: 1px solid #ddd;
+
+    border-bottom-left-radius: 4px;
+}
+
+.agent-input-area{
+    display: flex;
+
+    gap: 10px;
+
+    padding:10px;
+
+    border-top: 1px solid #e5e5e5;
+    background: white;
+}
+
+.agent-input{
+    flex: 1;
+
+    height: 50px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 999px;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+
+    outline: none;
+    
+    transition: 0.2s;
+}
+
+.agent-input:focus {
+    border-color: #008751;
+}
+
+.send-button{
+    width: 50px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #008751;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.send-button:hover{
+    transform: scale(1.05);
+}

@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+}
+
+/* ENTIRE PAGE LAYOUT */
+.page {
+    display: flex;
+    min-height: 100vh;
+
+    gap: 20px;
+    padding-right: 20px;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width: 80px;
+    background: rgb(131, 34, 34);
+    border-right: 1px solid #3605e6;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 20px;
+
+    position: sticky; /* stays in place as content scrolls */
+    top: 0; /* stays in place when the top of the element hits 0 from the viewport edge  */
+    height: 100vh;
+    overflow-y: auto; /* if sidebar items somehow overflow, scroll within it */
+}
+
+.sidebar-logo,
+.sidebar-item,
+.sidebar-bottom {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 14px;
+
+    background: #d8d8d8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 16px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.sidebar-item.active{
+    background: black;
+    color:white
+}
+
+
+.sidebar-bottom{
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+/* RIGH SIDE CONTENT */
+.content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    background: rgb(212, 209, 4);
+}
+
+.topbar{
+    margin-top: 5px;
+    height: 42px;
+    background: black;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+.main{
+    padding: 30px;
+    padding-top: 0;
+    background-color: aqua;
+}
+
+.hero{
+    position: relative;
+
+    height: 420px;
+
+    border-radius: 0 0 30px 30px;
+
+    background: #57af0f;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding-bottom: 32px;
+}
+
+
+/* CENTER CONTENT */
+.hero-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 2;
+    background-color: rgb(167, 96, 11);
+
+    width: auto;
+}
+
+.hero-logo{
+    font-size: 90px;
+
+    font-weight: bold;
+
+    color: #008751;
+}
+.search-wrapper{
+    position: relative;
+    width: 520px;
+
+    display: flex;
+    align-items: center;
+    background: rgb(236, 9, 104);
+}
+.search-box{
+    width: 100%;
+    height: 58px;
+    background: white;
+
+    padding: 0 50px 0 20px; /* space for button on right */
+    
+    border-radius: 999px;
+
+    border: 2px solid #ddd;
+    transition: 0.2s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    font-size: 18px;
+}
+
+.search-box:focus{
+    outline: none;
+    border-color: #acddc9;
+}
+
+.search-btn{
+    position: absolute;
+    right: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: #008751;
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FLOATING CARDS */
+.floating-card {
+    position: absolute;
+ 
+    width: 240px;
+    height: 220px;
+ 
+    background: white;
+ 
+    border-radius: 24px;
+ 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+ 
+    z-index: 1;
+ 
+    /* sit in the upper portion, above the hero-center */
+    top: 20px;
+}
+ 
+/* LEFT CARD */
+.card-1 {
+    left: 60px;
+}
+ 
+/* RIGHT CARD */
+.card-2 {
+    right: 60px;
+}
+
+/* CHIPS */
+.chips {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+    background-color: #5a31f4;
+}
+
+.chip{
+    display: flex;
+
+    padding: 12px 18px;
+
+    border-radius: 999px;
+
+    border: 1px solid #ddd;
+
+    font-weight: 500;
+    background-color: #0cd35f;
+}
+
+/* CONTENT SECTION */
+.grid-section{
+    margin-top: 10px;
+    background: #d7d7d7;
+}
+
+/* BIG IMAGE AREA */
+.card-grid {
+    display: grid;
+    background: #ff0202;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
+    gap: 60px;
+}
+
+.shop-grid{
+    border-radius: 28px;
+
+    background: #5e180f;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shop-grid:hover{
+    transform: scale(1.05);
+}
+
+.shop-grid img,
+.shop-image-placeholder{
+    width: 100%;
+    height: 320px;
+
+    align-self: center;
+
+    object-fit: cover;
+    background: #0dc54a;
+}
+
+.shop-name{
+    padding: 12px 14px;
+    
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+}
